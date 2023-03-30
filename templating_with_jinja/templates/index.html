@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<!--We can incorporate python code in templates through jinja, even send values/variables coded to html o/p-->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>My blog</title>
+  </head>
+  <body>
+  <h1>Hello World!!</h1>
+  <h2>This is python code using jinja 3*4 = {{ 3*4 }} </h2>
+  <h2>Now let's pass a variable </h2>
+  <p><a href="{{ url_for('get_blog', num=3)}}">My blog</a></p>
+  </body>
+  <footer><p>Copyright {{ year }} Build By Yesha with ❤</p></footer>
+</html>

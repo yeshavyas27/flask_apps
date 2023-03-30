@@ -1,0 +1,18 @@
+{% extends 'bootstrap/base.html' %}
+{% block title %}Add Book{% endblock %}
+{% block styles %}
+{{super()}}
+<link rel="stylesheet"
+      href="{{url_for('.static', filename='style.css')}}">
+{% endblock %}
+{% block content %}
+    <form action="/add" method="POST">
+    {{ form.csrf_token }}
+    {{ form.book_name.label }} {{ form.book_name(size=40) }}
+        {{ form.book_author.label }} {{ form.book_author(size=40) }}
+    {{ form.book_rating.label }} {{ form.book_rating }}
+
+    <input type="submit" value="Go">
+    </form>
+
+{% endblock %}
